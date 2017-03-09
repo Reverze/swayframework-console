@@ -1,0 +1,16 @@
+{
+    "name": "rev/sway-framework-console",
+    "description": "SwayFramework Console component",
+    "type": "sf-package",
+    "authors": [
+        {
+            "name": "Reverze",
+            "email": "hawkmedia24@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sway\\Component\\Console\\": "src/"
+        }
+    }
+}
