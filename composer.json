@@ -1,0 +1,23 @@
+{
+    "name": "rev/sway-framework-console",
+    "description": "Swayframework Console component",
+    "type": "sf-package",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Reverze",
+            "email": "hawkmedia24@gmail.com"
+        }
+    ],
+    "support": {
+        "email": "hawkmedia24@gmail.com"
+    },
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sway\\Component\\Console\\": "src/"
+        }
+    }
+}

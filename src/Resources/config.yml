@@ -1,0 +1,16 @@
+framework:
+    service:
+        console_compiler:
+            class: Sway\Component\Console\Compiler\CommandCompiler
+        console_router:
+            class: Sway\Component\Console\Routing\Router
+            arguments: [ "@distribution_storage", "@console_compiler" ]
+        console:
+            class: Sway\Component\Console\Console
+            arguments: [ "@distribution_class_founder", "@distribution_storage", "@console_router", "@console_compiler"]
+            tags:
+                event.listener:
+                    onConsoleLaunch: "@console:onConsoleLaunch"
+        
+    event.register:
+        console.eventOnConsoleLaunch: Sway\Component\Console\Event\ConsoleLaunchEvent
