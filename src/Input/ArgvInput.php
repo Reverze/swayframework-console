@@ -99,8 +99,10 @@ class ArgvInput
         /**
          * Saves the latest given command
          */
-        $route = Route::create($routePath, $flagContainer, $optionContainer);
-        $this->saveCommandRoute($route);             
+        if (!empty($routePath)){
+            $route = Route::create($routePath, $flagContainer, $optionContainer);
+            $this->saveCommandRoute($route);
+        }
     }
     
     /**
